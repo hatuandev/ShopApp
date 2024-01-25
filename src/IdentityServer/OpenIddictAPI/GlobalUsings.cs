@@ -1,0 +1,12 @@
+﻿global using Microsoft.AspNetCore.Authentication.Cookies;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Options;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.AspNetCore;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Authentication;
+global using OpenIddict.Abstractions;
+global using OpenIddict.Server.AspNetCore;
+global using OpenIddictAPI.Data;
+global using Quartz;

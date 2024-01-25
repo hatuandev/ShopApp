@@ -1,0 +1,123 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NetCore\\ShopApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A66CD258-53BD-44EF-8904-23B759B8E19E}|src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj|d:\\netcore\\shopapp\\src\\identityserver\\openiddictapi\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66CD258-53BD-44EF-8904-23B759B8E19E}|src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj|solutionrelative:src\\identityserver\\openiddictapi\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66CD258-53BD-44EF-8904-23B759B8E19E}|src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj|d:\\netcore\\shopapp\\src\\identityserver\\openiddictapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A66CD258-53BD-44EF-8904-23B759B8E19E}|src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj|solutionrelative:src\\identityserver\\openiddictapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46F36B1E-498F-4657-A457-ACADC07E453C}|src\\OrderAPI\\OrderAPI.csproj|d:\\netcore\\shopapp\\src\\orderapi\\infrastructure\\data\\orderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46F36B1E-498F-4657-A457-ACADC07E453C}|src\\OrderAPI\\OrderAPI.csproj|solutionrelative:src\\orderapi\\infrastructure\\data\\orderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46F36B1E-498F-4657-A457-ACADC07E453C}|src\\OrderAPI\\OrderAPI.csproj|d:\\netcore\\shopapp\\src\\orderapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46F36B1E-498F-4657-A457-ACADC07E453C}|src\\OrderAPI\\OrderAPI.csproj|solutionrelative:src\\orderapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A66CD258-53BD-44EF-8904-23B759B8E19E}|src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj|d:\\netcore\\shopapp\\src\\identityserver\\openiddictapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A66CD258-53BD-44EF-8904-23B759B8E19E}|src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj|solutionrelative:src\\identityserver\\openiddictapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 926,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwEgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T10:47:17.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\Program.cs",
+              "RelativeDocumentMoniker": "src\\IdentityServer\\OpenIddictAPI\\Program.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\Program.cs",
+              "RelativeToolTip": "src\\IdentityServer\\OpenIddictAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T10:47:14.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDbContext.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\OrderAPI\\Infrastructure\\Data\\OrderDbContext.cs",
+              "RelativeDocumentMoniker": "src\\OrderAPI\\Infrastructure\\Data\\OrderDbContext.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\OrderAPI\\Infrastructure\\Data\\OrderDbContext.cs",
+              "RelativeToolTip": "src\\OrderAPI\\Infrastructure\\Data\\OrderDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T10:46:23.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\OrderAPI\\Program.cs",
+              "RelativeDocumentMoniker": "src\\OrderAPI\\Program.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\OrderAPI\\Program.cs",
+              "RelativeToolTip": "src\\OrderAPI\\Program.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-25T10:46:17.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\IdentityServer\\OpenIddictAPI\\Dockerfile",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\Dockerfile",
+              "RelativeToolTip": "src\\IdentityServer\\OpenIddictAPI\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-01-25T10:45:49.787Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 343,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

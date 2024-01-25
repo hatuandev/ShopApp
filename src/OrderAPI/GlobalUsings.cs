@@ -1,0 +1,10 @@
+global using OrderAPI.Application.Common.Interfaces;
+global using OrderAPI.Application.Common.Models;
+global using OrderAPI.Domain.Entities;
+global using OrderAPI.Application.Common.Mappings;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.OpenApi.Models;
+global using MediatR;
+global using AutoMapper;
+global using AutoMapper.QueryableExtensions;
+global using Ardalis.GuardClauses;

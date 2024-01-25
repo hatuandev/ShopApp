@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  # rabbitmq:
+  #   ports:
+  #     - "5672:5672"
+
+  # redis:
+  #   ports:
+  #     - "5379:6379"
+  
+  sqlserver:
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=sqladmin123!@#
+
+  # gateway-api:
+  #   ports:
+  #     - "8000:8080"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ASPNETCORE_HTTP_PORTS=8080
+
+  identity-server:
+    ports:
+      - "8001:8080" 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStringIdentityServer="Server=sqlserver;Database=IdentityServerDB;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true;Encrypt=False"
+
+  # product:
+  #   ports:
+  #     - "8001:8080" 
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ASPNETCORE_HTTP_PORTS=8080
+
+  # order:
+  #   ports:
+  #     - "8002:8080"
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #     - ASPNETCORE_HTTP_PORTS=8080
+  

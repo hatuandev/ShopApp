@@ -1,0 +1,14 @@
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\GatewayApi.exe
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\appsettings.Development.json
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\appsettings.json
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\GatewayApi.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\GatewayApi.deps.json
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\GatewayApi.runtimeconfig.json
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\GatewayApi.pdb
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\System.IO.Hashing.dll
+D:\NetCore\ShopApp\src\GatewayApi\obj\Debug\net8.0\PubTmp\Out\Yarp.ReverseProxy.dll

@@ -1,0 +1,51 @@
+version: '3.6'
+
+networks:
+  my-network:
+    driver: bridge  
+
+services:
+  # rabbitmq:
+  #   container_name: RabbitMQ
+  #   image: rabbitmq:3-management-alpine
+
+  # redis:
+  #   container_name: Redis
+  #   image: redis:alpine
+  
+  sqlserver:
+    container_name: SqlServer
+    image: mcr.microsoft.com/mssql/server:2022-latest
+
+  # gateway-api:
+  #   container_name: gateway-api
+  #   build:
+  #     context: ..
+  #     dockerfile: ./src/GatewayApi/Dockerfile    
+  #   depends_on:
+  #     - product      
+  #     - order   
+
+  identity-server:
+    container_name: identity-server
+    build:
+      context: ..
+      dockerfile: ./src/IdentityServer/OpenIddictAPI/Dockerfile    
+    depends_on:
+      - sqlserver      
+
+  # product:
+  #   container_name: product
+  #   build:
+  #     context: ..
+  #     dockerfile: ./src/ProductAPI/Dockerfile
+  #   depends_on:
+  #     - sqlserver
+
+  # order:
+  #   container_name: order
+  #   build:
+  #     context: ..
+  #     dockerfile: ./src/OrderAPI/Dockerfile
+  #   depends_on:
+  #     - sqlserver

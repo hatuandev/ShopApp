@@ -1,0 +1,10 @@
+global using ProductAPI.Domain.Common;
+global using ProductAPI.Domain.Entities;
+global using ProductAPI.Application.Common.Models;
+global using ProductAPI.Application.Common.Interfaces;
+global using ProductAPI.Infrastructure.Data;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.OpenApi.Models;
+global using MediatR;
+global using AutoMapper;
+global using Ardalis.GuardClauses;
