@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
               "ToolTip": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
               "RelativeToolTip": "src\\IdentityServer\\OpenIddictAPI\\DependencyInjection.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAQwEgAAAA5AAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwDoAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-25T10:47:17.439Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "src\\IdentityServer\\OpenIddictAPI\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-25T10:47:14.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-25T10:47:14.926Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "src\\OrderAPI\\Infrastructure\\Data\\OrderDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-25T10:46:23.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-25T10:46:23.749Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "src\\OrderAPI\\Program.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-25T10:46:17.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-25T10:46:17.156Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "src\\IdentityServer\\OpenIddictAPI\\Dockerfile",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-01-25T10:45:49.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-25T10:45:49.787Z"
             }
           ]
         },
