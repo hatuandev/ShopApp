@@ -1,9 +1,15 @@
 using OpenIddictAPI;
+using OpenIddictAPI.ConfigurationOptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var appSettings = new AppSettings();
+
+var configuration = builder.Configuration;
+configuration.Bind(appSettings);
+
 // Add services to the container.
-builder.Services.AddOpenIddictServices(builder.Configuration);
+builder.Services.AddOpenIddictServices(builder.Configuration, appSettings);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -17,7 +23,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    await SeedClientCredentials(app.Services, builder.Configuration);
+    await SeedClientCredentials(app.Services, builder.Configuration, appSettings);
 }
 
 app.UseCors("AllowAllOrigins");
@@ -35,7 +41,7 @@ app.MapControllers();
 
 app.Run();
 
-static async Task SeedClientCredentials(IServiceProvider serviceProvider, IConfiguration configuration)
+static async Task SeedClientCredentials(IServiceProvider serviceProvider, IConfiguration configuration, AppSettings appSettings)
 {
     using var scope = serviceProvider.CreateScope();
 
@@ -45,14 +51,12 @@ static async Task SeedClientCredentials(IServiceProvider serviceProvider, IConfi
     var manager = scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
 
     // API application CC
-    string clientId = configuration["OpenIddict:ClientId"];
-    string clientSecret = configuration["OpenIddict:ClientSecret"];
-    if (await manager.FindByClientIdAsync(clientId) == null)
+    if (await manager.FindByClientIdAsync(appSettings.OpenIddictServer.ClientId) == null)
     {
         await manager.CreateAsync(new OpenIddictApplicationDescriptor
         {
-            ClientId = clientId,
-            ClientSecret = clientSecret,
+            ClientId = appSettings.OpenIddictServer.ClientId,
+            ClientSecret = appSettings.OpenIddictServer.ClientSecret,
             Permissions =
             {
                 OpenIddictConstants.Permissions.Endpoints.Authorization,

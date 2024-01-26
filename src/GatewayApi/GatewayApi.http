@@ -3,7 +3,7 @@
 POST {{GatewayApi_HostAddress}}/connect/token
 Content-Type: application/x-www-form-urlencoded
 
-grant_type=password&username=admin&password=Admin@123&client_id=WebApiCC&client_secret=YTOGh5kJBBEbiPXLUBNpZdrOMQmjBSVc
+grant_type=password&username=admin&password=Admin@123&client_id=GatewayApi&client_secret=YTOGh5kJBBEbiPXLUBNpZdrOMQmjBSVc
 
 ###
 

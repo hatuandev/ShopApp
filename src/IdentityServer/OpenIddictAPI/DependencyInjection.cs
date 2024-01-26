@@ -1,11 +1,13 @@
-﻿namespace OpenIddictAPI;
+﻿using OpenIddictAPI.ConfigurationOptions;
+
+namespace OpenIddictAPI;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddOpenIddictServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddOpenIddictServices(this IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
     {
-        var connectionString = configuration["ConnectionStringIdentityServer"];
-        var SecurityKey = new SymmetricSecurityKey(Convert.FromBase64String(configuration["OpenIddict:SecurityKey"]));
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        var SecurityKey = new SymmetricSecurityKey(Convert.FromBase64String(appSettings.OpenIddictServer.SecurityKey));
 
         services.AddDbContext<ApplicationDbContext>(options =>
         {
@@ -41,7 +43,7 @@ public static class DependencyInjection
                 builder =>
                 {
                     builder.AllowCredentials()
-                           .WithOrigins(configuration["GatewayApi:Host"])
+                           .WithOrigins(appSettings.GatewayApi.Host)
                            .SetIsOriginAllowedToAllowWildcardSubdomains()
                            .AllowAnyHeader()
                            .AllowAnyMethod();
@@ -95,7 +97,7 @@ public static class DependencyInjection
                 })
                 .AddValidation(options =>
                 {
-                    options.SetIssuer(configuration["GatewayApi:Host"]);
+                    options.SetIssuer(appSettings.GatewayApi.Host);
                     options.UseSystemNetHttp();
                 });
 
