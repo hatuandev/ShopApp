@@ -1,21 +1,44 @@
 version: '3.4'
 
 services:
-  # rabbitmq:
-  #   ports:
-  #     - "5672:5672"
+  rabbitmq:
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
 
-  # redis:
-  #   ports:
-  #     - "5379:6379"
-  
-  sqlserver:
+  redis:
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data:/data
+
+  redis_insight:    
+      ports:
+        - 8001:8001
+      volumes:
+        - redis_insight_data:/db
+
+  mssqldb:
     ports:
       - 1433:1433
     environment:
-      - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=sqladmin123!@#
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: 'sqladmin123!@#'
+      MSSQL_DATA_DIR: /var/opt/mssql/data
+      MSSQL_PID: 'Developer' 
+      MSSQL_TCP_PORT: 1433 
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
 
+volumes:
+  redis_data:
+  redis_insight_data:
+  
   # gateway-api:
   #   ports:
   #     - "8000:8080"
@@ -23,13 +46,13 @@ services:
   #     - ASPNETCORE_ENVIRONMENT=Development
   #     - ASPNETCORE_HTTP_PORTS=8080
 
-  identity-server:
-    ports:
-      - "8001:8080" 
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ConnectionStringIdentityServer="Server=sqlserver;Database=IdentityServerDB;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true;Encrypt=False"
+  # identity-server:
+  #   ports:
+  #     - 8001:8080
+  #   environment:
+  #     - ASPNETCORE_ENVIRONMENT: 'Development'
+  #     - ASPNETCORE_HTTP_PORTS: 8080
+  #     # - ConnectionStringIdentityServer: 'Server=sqlserver;Database=IdentityServerDB;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true;Encrypt=False'
 
   # product:
   #   ports:
