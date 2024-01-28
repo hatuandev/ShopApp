@@ -18,12 +18,12 @@ services:
     networks:
         - my-network
 
-  redis_insight:
-      container_name: RedisInsight  
-      image: redislabs/redisinsight:latest
-      restart: always
-      networks:
-          - my-network      
+  # redis_insight:
+  #     container_name: RedisInsight  
+  #     image: redislabs/redisinsight:latest
+  #     restart: always
+  #     networks:
+  #         - my-network      
 
   mssqldb:
     container_name: MssqlDB
@@ -31,25 +31,23 @@ services:
     networks:
         - my-network
         
-  # gateway-api:
-  #   container_name: gateway-api
-  #   build:
-  #     context: ..
-  #     dockerfile: ./src/GatewayApi/Dockerfile    
-  #   depends_on:
-  #     - product      
-  #     - order   
+  identityserver:
+    container_name: IdentityServer
+    build:
+      context: ..
+      dockerfile: ./src/IdentityServer/OpenIddictAPI/Dockerfile    
+    depends_on:
+      - mssqldb
+    networks:
+        - my-network
 
-  # identity-server:
-  #   container_name: identity-server
-  #   build:
-  #     context: ..
-  #     dockerfile: ./src/IdentityServer/OpenIddictAPI/Dockerfile    
-    # depends_on:
-    #   - sqlserver      
-    # networks:
-    #     - my-network
-
+  gateway-api:
+    container_name: gateway-api
+    build:
+      context: ..
+      dockerfile: ./src/GatewayApi/Dockerfile      
+    networks:
+        - my-network
   # product:
   #   container_name: product
   #   build:

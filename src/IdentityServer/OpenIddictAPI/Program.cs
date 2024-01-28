@@ -3,6 +3,8 @@ using OpenIddictAPI.ConfigurationOptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 var appSettings = new AppSettings();
 
 var configuration = builder.Configuration;
@@ -18,12 +20,14 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.MapDefaultEndpoints();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    await SeedClientCredentials(app.Services, builder.Configuration, appSettings);
+    await app.InitialiseDatabaseAsync(appSettings);
 }
 
 app.UseCors("AllowAllOrigins");
@@ -40,63 +44,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-static async Task SeedClientCredentials(IServiceProvider serviceProvider, IConfiguration configuration, AppSettings appSettings)
-{
-    using var scope = serviceProvider.CreateScope();
-
-    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    await context.Database.EnsureCreatedAsync();
-
-    var manager = scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
-
-    // API application CC
-    if (await manager.FindByClientIdAsync(appSettings.OpenIddictServer.ClientId) == null)
-    {
-        await manager.CreateAsync(new OpenIddictApplicationDescriptor
-        {
-            ClientId = appSettings.OpenIddictServer.ClientId,
-            ClientSecret = appSettings.OpenIddictServer.ClientSecret,
-            Permissions =
-            {
-                OpenIddictConstants.Permissions.Endpoints.Authorization,
-                OpenIddictConstants.Permissions.Endpoints.Token,
-                OpenIddictConstants.Permissions.Endpoints.Logout,
-
-                OpenIddictConstants.Permissions.GrantTypes.Password,
-                OpenIddictConstants.Permissions.GrantTypes.RefreshToken,
-
-                OpenIddictConstants.Permissions.Scopes.Email,
-                OpenIddictConstants.Permissions.Scopes.Profile,
-                OpenIddictConstants.Permissions.Scopes.Roles,
-            }
-        });
-    }
-
-    var _userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-    var _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
-    // Default roles
-    var administratorRole = new IdentityRole("Administrator");
-    if (_roleManager.Roles.All(r => r.Name != administratorRole.Name))
-    {
-        await _roleManager.CreateAsync(administratorRole);
-    }
-
-    // Default users
-    var administrator = new ApplicationUser { UserName = "admin", Email = "administrator@localhost" };
-    if (_userManager.Users.All(u => u.UserName != administrator.UserName))
-    {
-        await _userManager.CreateAsync(administrator, "Admin@123");
-        if (!string.IsNullOrWhiteSpace(administratorRole.Name))
-        {
-            await _userManager.AddToRolesAsync(administrator, new[] { administratorRole.Name });
-        }
-    }
-
-    var userRole = new IdentityRole("User");
-    if (_roleManager.Roles.All(r => r.Name != userRole.Name))
-    {
-        await _roleManager.CreateAsync(userRole);
-    }
-}

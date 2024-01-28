@@ -7,6 +7,7 @@ public static class DependencyInjection
     public static IServiceCollection AddOpenIddictServices(this IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
+        //var connectionString = configuration["ConnectionStrings"];
         var SecurityKey = new SymmetricSecurityKey(Convert.FromBase64String(appSettings.OpenIddictServer.SecurityKey));
 
         services.AddDbContext<ApplicationDbContext>(options =>
@@ -39,15 +40,15 @@ public static class DependencyInjection
 
         services.AddCors(options =>
         {
-            options.AddPolicy("AllowAllOrigins",
-                builder =>
-                {
-                    builder.AllowCredentials()
-                           .WithOrigins(appSettings.GatewayApi.Host)
-                           .SetIsOriginAllowedToAllowWildcardSubdomains()
-                           .AllowAnyHeader()
-                           .AllowAnyMethod();
-                });
+           options.AddPolicy("AllowAllOrigins",
+               builder =>
+               {
+                   builder.AllowCredentials()
+                          .WithOrigins(appSettings.GatewayApi.Host)
+                          .SetIsOriginAllowedToAllowWildcardSubdomains()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+               });
         });
 
         services.AddOpenIddict()
@@ -100,6 +101,8 @@ public static class DependencyInjection
                     options.SetIssuer(appSettings.GatewayApi.Host);
                     options.UseSystemNetHttp();
                 });
+
+        services.AddScoped<ApplicationDbContextInitialiser>();
 
         return services;
     }

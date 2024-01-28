@@ -1,6 +1,7 @@
 using ProductAPI.Application.Products.Commands.CreateProduct;
 using ProductAPI.Application.Products.Commands.DeleteProduct;
 using ProductAPI.Application.Products.Commands.UpdateProduct;
+using ProductAPI.Application.Products.Queries.GetProductById;
 using ProductAPI.Application.Products.Queries.GetProductWithPagination;
 using ProductAPI.Infrastructure.BaseEndpoint;
 
@@ -13,12 +14,18 @@ public class Products : EndpointGroupBase
         var group = app.MapGroup("/api/v1/products");
 
         group.MapGet("/", GetProductWithPagination);
+        group.MapGet("/{id:int}", GetProductById);
         group.MapPost("/", CreateProduct);
-        group.MapPut("/{id}", UpdateProduct);
-        group.MapDelete("/{id}", DeleteProduct);
+        group.MapPut("/{id:int}", UpdateProduct);
+        group.MapDelete("/{id:int}", DeleteProduct);
     }
 
     public async Task<PaginatedList<GetProductWithPaginationDto>> GetProductWithPagination(ISender sender, [AsParameters] GetProductWithPaginationQuery query)
+    {
+        return await sender.Send(query);
+    }
+
+    public async Task<GetProductByIdDto> GetProductById(ISender sender, [AsParameters] GetProductByIdQuery query)
     {
         return await sender.Send(query);
     }

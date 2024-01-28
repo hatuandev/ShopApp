@@ -145,8 +145,32 @@
   },
   {
     "ContainingType": "ProductAPI.Endpoints.Products",
+    "Method": "GetProductById",
+    "RelativePath": "api/v1/products/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductAPI.Application.Products.Queries.GetProductById.GetProductByIdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProductAPI.Endpoints.Products",
     "Method": "UpdateProduct",
-    "RelativePath": "api/v1/products/{id}",
+    "RelativePath": "api/v1/products/{id:int}",
     "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
@@ -173,7 +197,7 @@
   {
     "ContainingType": "ProductAPI.Endpoints.Products",
     "Method": "DeleteProduct",
-    "RelativePath": "api/v1/products/{id}",
+    "RelativePath": "api/v1/products/{id:int}",
     "HttpMethod": "DELETE",
     "IsController": false,
     "Order": 0,
