@@ -24,6 +24,6 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\msI\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
     <PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets Condition=" '$(PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets)' == '' ">C:\Users\msI\.nuget\packages\microsoft.visualstudio.azure.containers.tools.targets\1.19.6</PkgMicrosoft_VisualStudio_Azure_Containers_Tools_Targets>
-    <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\msI\.nuget\packages\grpc.tools\2.58.0</PkgGrpc_Tools>
+    <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\msI\.nuget\packages\grpc.tools\2.60.0</PkgGrpc_Tools>
   </PropertyGroup>
 </Project>

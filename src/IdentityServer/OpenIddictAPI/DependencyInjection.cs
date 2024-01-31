@@ -4,12 +4,13 @@ namespace OpenIddictAPI;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddOpenIddictServices(this IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
+    public static IServiceCollection AddOpenIddictServices(this IHostApplicationBuilder builder, IConfiguration configuration, AppSettings appSettings)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
         //var connectionString = configuration["ConnectionStrings"];
         var SecurityKey = new SymmetricSecurityKey(Convert.FromBase64String(appSettings.OpenIddictServer.SecurityKey));
 
+        var services = builder.Services;
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             options.UseSqlServer(connectionString);

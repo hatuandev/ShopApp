@@ -11,6 +11,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .HasMaxLength(200)
             .IsRequired();
 
+        builder.HasOne(t => t.ProductType);
         builder.HasData(new List<Product> {
             new Product 
             {   Id = 1,

@@ -22,6 +22,9 @@
       Add-Migration -Context ApplicationDbContext Init
       Update-Database -Context ApplicationDbContext
 
+      Add-Migration -Context ProductDbContext Init
+      Update-Database -Context ProductDbContext
+
       Add-Migration -Context ConfigurationDbContext Init -OutputDir Migrations/ConfigurationDb
       Add-Migration -Context PersistedGrantDbContext Init -OutputDir Migrations/PersistedGrantDb
       Update-Database -Context AdsDbContext
@@ -29,3 +32,5 @@
       Update-Database -Context PersistedGrantDbContext
       ```
 </details>
+
+docker run -p 6379:6379 redis

@@ -12,53 +12,37 @@ services:
   redis:
     ports:
       - 6379:6379
+
+  mssqldb:
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: 'sqladmin123!@#'
+      MSSQL_DATA_DIR: /var/opt/mssql/data
+      MSSQL_PID: 'Developer' 
+      MSSQL_TCP_PORT: 1433 
     volumes:
-      - redis_data:/data
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
 
-  # redis_insight:    
-  #     ports:
-  #       - 8001:8001
-  #     volumes:
-  #       - redis_insight_data:/db
+  gateway-api:
+    ports:
+      - 5000:8080
+      - 5001:8081
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_HTTP_PORTS=8080
 
-  # mssqldb:
-  #   ports:
-  #     - 1433:1433
-  #   environment:
-  #     ACCEPT_EULA: 'Y'
-  #     MSSQL_SA_PASSWORD: 'sqladmin123!@#'
-  #     MSSQL_DATA_DIR: /var/opt/mssql/data
-  #     MSSQL_PID: 'Developer' 
-  #     MSSQL_TCP_PORT: 1433 
-  #   volumes:
-  #     - ./data:/var/opt/mssql/data
-  #     - ./log:/var/opt/mssql/log
-  #     - ./secrets:/var/opt/mssql/secrets
-
-  # gateway-api:
-  #   ports:
-  #     - 5000:8080
-  #     - 5001:8081
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=docker
-  #     - ASPNETCORE_HTTP_PORTS=8080
-
-  # identityserver:
-  #   ports:
-  #     - 5180:8080
-  #     - 5181:8081
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=docker
-  #     - ASPNETCORE_HTTP_PORTS=8080
-  #     - ConnectionStrings=Server=mssqldb;Database=IdentityServerDB;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true;Encrypt=False
-
-
-
-# volumes:
-#   redis_data:
-#   redis_insight_data:
-  
-
+  identityserver:
+    ports:
+      - 5180:8080
+      - 5181:8081
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings=Server=mssqldb;Database=IdentityServerDB;User Id=sa;Password=sqladmin123!@#;MultipleActiveResultSets=true;Encrypt=False
 
 
   # product:

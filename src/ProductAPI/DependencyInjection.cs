@@ -25,6 +25,12 @@ public static class DependencyInjection
             options.UseSqlServer(connectionString, builder => builder.MigrationsAssembly(typeof(ProductDbContext).Assembly.FullName));
         });
 
+        services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = configuration.GetConnectionString("RedisConnection");
+            options.InstanceName = "SampleInstance";
+        });
+
         services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
         return services;

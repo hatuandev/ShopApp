@@ -12,7 +12,7 @@ public class Orders : EndpointGroupBase
     {
         var group = app.MapGroup("/api/v1/orders");
 
-        group.MapGet("/", GetOrderWithPagination).RequireAuthorization();
+        group.MapGet("/", GetOrderWithPagination);
         group.MapPost("/", CreateOrder);
         group.MapPut("/{id}", UpdateOrder);
         group.MapDelete("/{id}", DeleteOrder);

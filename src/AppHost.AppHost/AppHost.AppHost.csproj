@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GatewayApi\GatewayApi.csproj" />
     <ProjectReference Include="..\IdentityServer\OpenIddictAPI\OpenIddictAPI.csproj" />
     <ProjectReference Include="..\OrderAPI\OrderAPI.csproj" />
     <ProjectReference Include="..\ProductAPI\ProductAPI.csproj" />
@@ -16,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting" Version="8.0.0-preview.1.23557.2" />
+    <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0-preview.2.23619.3" />
   </ItemGroup>
 
 </Project>

@@ -88,7 +88,7 @@
           }
         }
       },
-      "Google.Protobuf/3.22.5": {
+      "Google.Protobuf/3.24.0": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -101,11 +101,61 @@
           }
         }
       },
-      "Grpc.Core.Api/2.52.0": {
+      "Grpc.AspNetCore/2.60.0": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "Google.Protobuf": "3.24.0",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.60.0",
+          "Grpc.Tools": "2.60.0"
         },
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
+      "Grpc.AspNetCore.Server/2.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.60.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.60.0",
+          "Grpc.Net.ClientFactory": "2.60.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.Core.Api/2.60.0": {
+        "type": "package",
         "compile": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
@@ -117,37 +167,61 @@
           }
         }
       },
-      "Grpc.Net.Client/2.52.0": {
+      "Grpc.Net.Client/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Common": "2.52.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
+          "Grpc.Net.Common": "2.60.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Grpc.Net.Common/2.52.0": {
+      "Grpc.Net.ClientFactory/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.52.0"
+          "Grpc.Net.Client": "2.60.0",
+          "Microsoft.Extensions.Http": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Grpc.Net.Common/2.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.60.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.Tools/2.60.0": {
+        "type": "package",
+        "build": {
+          "build/Grpc.Tools.props": {},
+          "build/Grpc.Tools.targets": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -742,6 +816,25 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.1",
+          "StackExchange.Redis": "2.6.122"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Compliance.Abstractions/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -1176,7 +1269,7 @@
           }
         }
       },
-      "Microsoft.Extensions.Options/8.0.0": {
+      "Microsoft.Extensions.Options/8.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
@@ -1579,6 +1672,19 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "OpenTelemetry/1.7.0-alpha.1": {
         "type": "package",
         "dependencies": {
@@ -1732,6 +1838,22 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Polly.Core/8.0.0": {
         "type": "package",
         "compile": {
@@ -1778,6 +1900,22 @@
         "runtime": {
           "lib/net6.0/Polly.RateLimiting.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "StackExchange.Redis/2.6.122": {
+        "type": "package",
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "compile": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2076,7 +2214,7 @@
       "System.IO.Pipelines/6.0.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
         },
@@ -2558,7 +2696,7 @@
           }
         }
       },
-      "Google.Protobuf/3.22.5": {
+      "Google.Protobuf/3.24.0": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -2571,11 +2709,61 @@
           }
         }
       },
-      "Grpc.Core.Api/2.52.0": {
+      "Grpc.AspNetCore/2.60.0": {
         "type": "package",
         "dependencies": {
-          "System.Memory": "4.5.3"
+          "Google.Protobuf": "3.24.0",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.60.0",
+          "Grpc.Tools": "2.60.0"
         },
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
+      "Grpc.AspNetCore.Server/2.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Net.Common": "2.60.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.60.0",
+          "Grpc.Net.ClientFactory": "2.60.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Grpc.Core.Api/2.60.0": {
+        "type": "package",
         "compile": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
             "related": ".pdb;.xml"
@@ -2587,37 +2775,61 @@
           }
         }
       },
-      "Grpc.Net.Client/2.52.0": {
+      "Grpc.Net.Client/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Net.Common": "2.52.0",
-          "Microsoft.Extensions.Logging.Abstractions": "3.0.3"
+          "Grpc.Net.Common": "2.60.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Client.dll": {
+          "lib/net8.0/Grpc.Net.Client.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Grpc.Net.Common/2.52.0": {
+      "Grpc.Net.ClientFactory/2.60.0": {
         "type": "package",
         "dependencies": {
-          "Grpc.Core.Api": "2.52.0"
+          "Grpc.Net.Client": "2.60.0",
+          "Microsoft.Extensions.Http": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Grpc.Net.Common.dll": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "Grpc.Net.Common/2.60.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.60.0"
+        },
+        "compile": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Grpc.Tools/2.60.0": {
+        "type": "package",
+        "build": {
+          "build/Grpc.Tools.props": {},
+          "build/Grpc.Tools.targets": {}
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -3184,6 +3396,25 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.1",
+          "StackExchange.Redis": "2.6.122"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Compliance.Abstractions/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -3618,7 +3849,7 @@
           }
         }
       },
-      "Microsoft.Extensions.Options/8.0.0": {
+      "Microsoft.Extensions.Options/8.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
@@ -4015,6 +4246,19 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "OpenTelemetry/1.7.0-alpha.1": {
         "type": "package",
         "dependencies": {
@@ -4168,6 +4412,22 @@
           }
         }
       },
+      "Pipelines.Sockets.Unofficial/2.2.8": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "5.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Polly.Core/8.0.0": {
         "type": "package",
         "compile": {
@@ -4261,6 +4521,22 @@
         },
         "runtime": {
           "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll": {}
+        }
+      },
+      "StackExchange.Redis/2.6.122": {
+        "type": "package",
+        "dependencies": {
+          "Pipelines.Sockets.Unofficial": "2.2.8"
+        },
+        "compile": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/StackExchange.Redis.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Swashbuckle.AspNetCore/6.5.0": {
@@ -4548,7 +4824,7 @@
       "System.IO.Pipelines/6.0.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
         },
@@ -4996,14 +5272,14 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "Google.Protobuf/3.22.5": {
-      "sha512": "tTMtDZPbLxJew8pk7NBdqhLqC4OipfkZdwPuCEUNr2AoDo1siUGcxFqJK0wDewTL8ge5Cjrb16CToMPxBUHMGA==",
+    "Google.Protobuf/3.24.0": {
+      "sha512": "5j/OBUVWPTeRYlG3Dm4PSupyU6nJmbnnhPeqjePzCqtzrh5vErx8dToStuhTnG1ZYZ+dawGziC7DN1I6FEQH0g==",
       "type": "package",
-      "path": "google.protobuf/3.22.5",
+      "path": "google.protobuf/3.24.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.22.5.nupkg.sha512",
+        "google.protobuf.3.24.0.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -5019,22 +5295,78 @@
         "lib/netstandard2.0/Google.Protobuf.xml"
       ]
     },
-    "Grpc.Core.Api/2.52.0": {
-      "sha512": "SQiPyBczG4vKPmI6Fd+O58GcxxDSFr6nfRAJuBDUNj+PgdokhjWJvZE/La1c09AkL2FVm/jrDloG89nkzmVF7A==",
+    "Grpc.AspNetCore/2.60.0": {
+      "sha512": "fFLF1/7C+ZZ10vpw63jNRp9VMIXAAmSFKD8pp8rDtD6Z51H4qYYto/go+XhBs7av5piG+GziSP0uA1VZAYLgAA==",
       "type": "package",
-      "path": "grpc.core.api/2.52.0",
+      "path": "grpc.aspnetcore/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.core.api.2.52.0.nupkg.sha512",
+        "grpc.aspnetcore.2.60.0.nupkg.sha512",
+        "grpc.aspnetcore.nuspec",
+        "lib/net6.0/_._",
+        "lib/net7.0/_._",
+        "lib/net8.0/_._",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.AspNetCore.Server/2.60.0": {
+      "sha512": "BwBvT8WJm5YfUtRdUxG1iqxd1p0rVo3GC/+gM93vS2MvQQa+E9o8PH6hrTrS9OMXeN3IzpU0yv27QBryl4OKZw==",
+      "type": "package",
+      "path": "grpc.aspnetcore.server/2.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.aspnetcore.server.2.60.0.nupkg.sha512",
+        "grpc.aspnetcore.server.nuspec",
+        "lib/net6.0/Grpc.AspNetCore.Server.dll",
+        "lib/net6.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net6.0/Grpc.AspNetCore.Server.xml",
+        "lib/net7.0/Grpc.AspNetCore.Server.dll",
+        "lib/net7.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net7.0/Grpc.AspNetCore.Server.xml",
+        "lib/net8.0/Grpc.AspNetCore.Server.dll",
+        "lib/net8.0/Grpc.AspNetCore.Server.pdb",
+        "lib/net8.0/Grpc.AspNetCore.Server.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.AspNetCore.Server.ClientFactory/2.60.0": {
+      "sha512": "QjhyB/vW1RkvdT2ddxvsOzA5gRhiYxGww3VMXlXVBXD2rKrSj9m8Z3BlatdTtiM+W+zsMfgoggxCIIktcxyWkA==",
+      "type": "package",
+      "path": "grpc.aspnetcore.server.clientfactory/2.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.aspnetcore.server.clientfactory.2.60.0.nupkg.sha512",
+        "grpc.aspnetcore.server.clientfactory.nuspec",
+        "lib/net6.0/Grpc.AspNetCore.Server.ClientFactory.dll",
+        "lib/net6.0/Grpc.AspNetCore.Server.ClientFactory.pdb",
+        "lib/net6.0/Grpc.AspNetCore.Server.ClientFactory.xml",
+        "lib/net7.0/Grpc.AspNetCore.Server.ClientFactory.dll",
+        "lib/net7.0/Grpc.AspNetCore.Server.ClientFactory.pdb",
+        "lib/net7.0/Grpc.AspNetCore.Server.ClientFactory.xml",
+        "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll",
+        "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.pdb",
+        "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Core.Api/2.60.0": {
+      "sha512": "VWah+8dGJhhsay5BQ/Ljq6GYDWj0lSjdzqyoBgUQhXTbBqhs+q5dRFROKxI1xxzlL4pfUO45cf/y+KnHVFG9ew==",
+      "type": "package",
+      "path": "grpc.core.api/2.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.core.api.2.60.0.nupkg.sha512",
         "grpc.core.api.nuspec",
         "lib/net462/Grpc.Core.Api.dll",
         "lib/net462/Grpc.Core.Api.pdb",
         "lib/net462/Grpc.Core.Api.xml",
-        "lib/netstandard1.5/Grpc.Core.Api.dll",
-        "lib/netstandard1.5/Grpc.Core.Api.pdb",
-        "lib/netstandard1.5/Grpc.Core.Api.xml",
         "lib/netstandard2.0/Grpc.Core.Api.dll",
         "lib/netstandard2.0/Grpc.Core.Api.pdb",
         "lib/netstandard2.0/Grpc.Core.Api.xml",
@@ -5044,25 +5376,28 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Client/2.52.0": {
-      "sha512": "hWVH9g/Nnjz40ni//2S8UIOyEmhueQREoZIkD0zKHEPqLxXcNlbp4eebXIOicZtkwDSx0TFz9NpkbecEDn6rBw==",
+    "Grpc.Net.Client/2.60.0": {
+      "sha512": "J9U96gjZHOcqSgAThg9vZZhLsbTD005bUggPtMP/RVQnGc3+tQJTpkRUCJtJWq9cykNydsRVoyU38TjPP/VJ4A==",
       "type": "package",
-      "path": "grpc.net.client/2.52.0",
+      "path": "grpc.net.client/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "grpc.net.client.2.52.0.nupkg.sha512",
+        "grpc.net.client.2.60.0.nupkg.sha512",
         "grpc.net.client.nuspec",
-        "lib/net5.0/Grpc.Net.Client.dll",
-        "lib/net5.0/Grpc.Net.Client.pdb",
-        "lib/net5.0/Grpc.Net.Client.xml",
+        "lib/net462/Grpc.Net.Client.dll",
+        "lib/net462/Grpc.Net.Client.pdb",
+        "lib/net462/Grpc.Net.Client.xml",
         "lib/net6.0/Grpc.Net.Client.dll",
         "lib/net6.0/Grpc.Net.Client.pdb",
         "lib/net6.0/Grpc.Net.Client.xml",
         "lib/net7.0/Grpc.Net.Client.dll",
         "lib/net7.0/Grpc.Net.Client.pdb",
         "lib/net7.0/Grpc.Net.Client.xml",
+        "lib/net8.0/Grpc.Net.Client.dll",
+        "lib/net8.0/Grpc.Net.Client.pdb",
+        "lib/net8.0/Grpc.Net.Client.xml",
         "lib/netstandard2.0/Grpc.Net.Client.dll",
         "lib/netstandard2.0/Grpc.Net.Client.pdb",
         "lib/netstandard2.0/Grpc.Net.Client.xml",
@@ -5072,24 +5407,52 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Net.Common/2.52.0": {
-      "sha512": "di9qzpdx525IxumZdYmu6sG2y/gXJyYeZ1ruFUzB9BJ1nj4kU1/dTAioNCMt1VLRvNVDqh8S8B1oBdKhHJ4xRg==",
+    "Grpc.Net.ClientFactory/2.60.0": {
+      "sha512": "lCUZjbv6TtI1FbOUE593PLCkXqW2Yrf3KsFfzxIMdJ54o4ELwCEQ26xjfrm+hMTefiXxvXf9FO7zL1rGLWWSig==",
       "type": "package",
-      "path": "grpc.net.common/2.52.0",
+      "path": "grpc.net.clientfactory/2.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "grpc.net.common.2.52.0.nupkg.sha512",
+        "README.md",
+        "grpc.net.clientfactory.2.60.0.nupkg.sha512",
+        "grpc.net.clientfactory.nuspec",
+        "lib/net6.0/Grpc.Net.ClientFactory.dll",
+        "lib/net6.0/Grpc.Net.ClientFactory.pdb",
+        "lib/net6.0/Grpc.Net.ClientFactory.xml",
+        "lib/net7.0/Grpc.Net.ClientFactory.dll",
+        "lib/net7.0/Grpc.Net.ClientFactory.pdb",
+        "lib/net7.0/Grpc.Net.ClientFactory.xml",
+        "lib/net8.0/Grpc.Net.ClientFactory.dll",
+        "lib/net8.0/Grpc.Net.ClientFactory.pdb",
+        "lib/net8.0/Grpc.Net.ClientFactory.xml",
+        "lib/netstandard2.0/Grpc.Net.ClientFactory.dll",
+        "lib/netstandard2.0/Grpc.Net.ClientFactory.pdb",
+        "lib/netstandard2.0/Grpc.Net.ClientFactory.xml",
+        "lib/netstandard2.1/Grpc.Net.ClientFactory.dll",
+        "lib/netstandard2.1/Grpc.Net.ClientFactory.pdb",
+        "lib/netstandard2.1/Grpc.Net.ClientFactory.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.Net.Common/2.60.0": {
+      "sha512": "Y/917aplgD1RA0q1cd9WpnMGyl9Luu3WZl6ZMpPvNQwg2TNw/3uXUDSriDBybeCtxnKUCtxUcWO3WsVkhM1DcA==",
+      "type": "package",
+      "path": "grpc.net.common/2.60.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.net.common.2.60.0.nupkg.sha512",
         "grpc.net.common.nuspec",
-        "lib/net5.0/Grpc.Net.Common.dll",
-        "lib/net5.0/Grpc.Net.Common.pdb",
-        "lib/net5.0/Grpc.Net.Common.xml",
         "lib/net6.0/Grpc.Net.Common.dll",
         "lib/net6.0/Grpc.Net.Common.pdb",
         "lib/net6.0/Grpc.Net.Common.xml",
         "lib/net7.0/Grpc.Net.Common.dll",
         "lib/net7.0/Grpc.Net.Common.pdb",
         "lib/net7.0/Grpc.Net.Common.xml",
+        "lib/net8.0/Grpc.Net.Common.dll",
+        "lib/net8.0/Grpc.Net.Common.pdb",
+        "lib/net8.0/Grpc.Net.Common.xml",
         "lib/netstandard2.0/Grpc.Net.Common.dll",
         "lib/netstandard2.0/Grpc.Net.Common.pdb",
         "lib/netstandard2.0/Grpc.Net.Common.xml",
@@ -5097,6 +5460,55 @@
         "lib/netstandard2.1/Grpc.Net.Common.pdb",
         "lib/netstandard2.1/Grpc.Net.Common.xml",
         "packageIcon.png"
+      ]
+    },
+    "Grpc.Tools/2.60.0": {
+      "sha512": "gX2YT08W+4eM25T+ypdbrena91iqz1QywTseu4wVEfYEFpUWbb3G7tDCNU4Fb2D01SS+EipjmRRfXx/BWryrvA==",
+      "type": "package",
+      "path": "grpc.tools/2.60.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Grpc.Tools.props",
+        "build/Grpc.Tools.targets",
+        "build/_grpc/Grpc.CSharp.xml",
+        "build/_grpc/_Grpc.Tools.props",
+        "build/_grpc/_Grpc.Tools.targets",
+        "build/_protobuf/Google.Protobuf.Tools.props",
+        "build/_protobuf/Google.Protobuf.Tools.targets",
+        "build/_protobuf/Protobuf.CSharp.xml",
+        "build/_protobuf/net45/Protobuf.MSBuild.dll",
+        "build/_protobuf/net45/Protobuf.MSBuild.pdb",
+        "build/_protobuf/netstandard1.3/Protobuf.MSBuild.dll",
+        "build/_protobuf/netstandard1.3/Protobuf.MSBuild.pdb",
+        "build/native/include/google/protobuf/any.proto",
+        "build/native/include/google/protobuf/api.proto",
+        "build/native/include/google/protobuf/descriptor.proto",
+        "build/native/include/google/protobuf/duration.proto",
+        "build/native/include/google/protobuf/empty.proto",
+        "build/native/include/google/protobuf/field_mask.proto",
+        "build/native/include/google/protobuf/source_context.proto",
+        "build/native/include/google/protobuf/struct.proto",
+        "build/native/include/google/protobuf/timestamp.proto",
+        "build/native/include/google/protobuf/type.proto",
+        "build/native/include/google/protobuf/wrappers.proto",
+        "grpc.tools.2.60.0.nupkg.sha512",
+        "grpc.tools.nuspec",
+        "packageIcon.png",
+        "tools/linux_arm64/grpc_csharp_plugin",
+        "tools/linux_arm64/protoc",
+        "tools/linux_x64/grpc_csharp_plugin",
+        "tools/linux_x64/protoc",
+        "tools/linux_x86/grpc_csharp_plugin",
+        "tools/linux_x86/protoc",
+        "tools/macosx_x64/grpc_csharp_plugin",
+        "tools/macosx_x64/protoc",
+        "tools/windows_x64/grpc_csharp_plugin.exe",
+        "tools/windows_x64/protoc.exe",
+        "tools/windows_x86/grpc_csharp_plugin.exe",
+        "tools/windows_x86/protoc.exe"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -6209,6 +6621,25 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.1": {
+      "sha512": "Z6Wg+oyypeXfYNUbrFZ/zzqmoQOH0SpvAzj8fWEf8kF8HmmkLkJ4yIHGOu/R1tjCpoWzhgWxgME6Ct+ovRA+Ig==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.stackexchangeredis/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net462/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.StackExchangeRedis.xml",
+        "microsoft.extensions.caching.stackexchangeredis.8.0.1.nupkg.sha512",
+        "microsoft.extensions.caching.stackexchangeredis.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Compliance.Abstractions/8.0.0": {
       "sha512": "FZ+Y66GF0VwvPgQSmMMNNUxEtjy3Nh9r2iTvZW+UXUtHPmdtXg85NtVYYihhR8guNNQ0LZgfioxiRRjbMECfvw==",
       "type": "package",
@@ -6847,10 +7278,10 @@
         "microsoft.extensions.objectpool.nuspec"
       ]
     },
-    "Microsoft.Extensions.Options/8.0.0": {
-      "sha512": "JOVOfqpnqlVLUzINQ2fox8evY2SKLYJ3BV8QDe/Jyp21u1T7r45x/R/5QdteURMR5r01GxeJSBBUOCOyaNXA3g==",
+    "Microsoft.Extensions.Options/8.0.1": {
+      "sha512": "wmpp+BSU3oGifaev6Z9rrlwHoITLFfpVOSbgBrOXjkbJSCXnZVCsoRGE5c3fJFI4VlNgnNkNlI9y+5jC4fmOEA==",
       "type": "package",
-      "path": "microsoft.extensions.options/8.0.0",
+      "path": "microsoft.extensions.options/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6889,7 +7320,7 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.8.0.0.nupkg.sha512",
+        "microsoft.extensions.options.8.0.1.nupkg.sha512",
         "microsoft.extensions.options.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -7436,6 +7867,36 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "OpenTelemetry/1.7.0-alpha.1": {
       "sha512": "si6/eSIYcs5PA/cOLIT9RI++s1sOyYWVACFEni+ZTfm4c1UBLFdphz0Vu+dUtgrYsr6jn2UJlAXh8UKw9B8wUQ==",
       "type": "package",
@@ -7610,6 +8071,29 @@
         "opentelemetry.instrumentation.runtime.nuspec"
       ]
     },
+    "Pipelines.Sockets.Unofficial/2.2.8": {
+      "sha512": "zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
+      "type": "package",
+      "path": "pipelines.sockets.unofficial/2.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Pipelines.Sockets.Unofficial.dll",
+        "lib/net461/Pipelines.Sockets.Unofficial.xml",
+        "lib/net472/Pipelines.Sockets.Unofficial.dll",
+        "lib/net472/Pipelines.Sockets.Unofficial.xml",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/net5.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netcoreapp3.1/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.dll",
+        "lib/netstandard2.1/Pipelines.Sockets.Unofficial.xml",
+        "pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+        "pipelines.sockets.unofficial.nuspec"
+      ]
+    },
     "Polly.Core/8.0.0": {
       "sha512": "g+8HnRjFTs8Ujz4Si4slrVrEK9M92DjvF75WvNpnF/lbT8M3/xW+tuD2udTiv2KuOsFOsRfOcZ12PddizrtXVA==",
       "type": "package",
@@ -7765,6 +8249,27 @@
         "runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
         "runtime.unix.system.private.uri.nuspec",
         "runtimes/unix/lib/netstandard1.0/System.Private.Uri.dll"
+      ]
+    },
+    "StackExchange.Redis/2.6.122": {
+      "sha512": "wp7mvGpFXaevfZ07/SDeh/6YHUJEgwJIGyjbDWKBYbPwKMJQYFz9zFEmBptqtVzqvSgft5nlewwutoaMaG0LPA==",
+      "type": "package",
+      "path": "stackexchange.redis/2.6.122",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/StackExchange.Redis.dll",
+        "lib/net461/StackExchange.Redis.xml",
+        "lib/net472/StackExchange.Redis.dll",
+        "lib/net472/StackExchange.Redis.xml",
+        "lib/net6.0/StackExchange.Redis.dll",
+        "lib/net6.0/StackExchange.Redis.xml",
+        "lib/netcoreapp3.1/StackExchange.Redis.dll",
+        "lib/netcoreapp3.1/StackExchange.Redis.xml",
+        "lib/netstandard2.0/StackExchange.Redis.dll",
+        "lib/netstandard2.0/StackExchange.Redis.xml",
+        "stackexchange.redis.2.6.122.nupkg.sha512",
+        "stackexchange.redis.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.5.0": {
@@ -9040,13 +9545,16 @@
       "AppHost.ServiceDefaults >= 1.0.0",
       "Ardalis.GuardClauses >= 4.3.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Grpc.AspNetCore >= 2.60.0",
       "MediatR >= 12.2.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Relational >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
+      "Microsoft.Extensions.Caching.StackExchangeRedis >= 8.0.1",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.6",
+      "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -9112,6 +9620,10 @@
             "target": "Package",
             "version": "[12.0.1, )"
           },
+          "Grpc.AspNetCore": {
+            "target": "Package",
+            "version": "[2.60.0, )"
+          },
           "MediatR": {
             "target": "Package",
             "version": "[12.2.0, )"
@@ -9138,9 +9650,17 @@
             "target": "Package",
             "version": "[8.0.0, )"
           },
+          "Microsoft.Extensions.Caching.StackExchangeRedis": {
+            "target": "Package",
+            "version": "[8.0.1, )"
+          },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.19.6, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

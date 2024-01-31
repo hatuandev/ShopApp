@@ -4,8 +4,7 @@ public record CreateOrderCommand : IRequest<int>
 {
     public string? Name { get; init; }
     public DateTimeOffset DateOrder { get; init; }
-    public decimal Total { get; init; }
-    public List<OrderItem> OrderItems { get; init; } = new List<OrderItem>();
+    public List<CreateOrderItemDto> OrderItems { get; init; } = new List<CreateOrderItemDto>();
 }
 
 public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, int>
@@ -23,8 +22,27 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, int
         {
             Name = request.Name,
             DateOrder = request.DateOrder,
-            Total = 0,
         };
+
+        if (request.OrderItems.Count > 0)
+        {
+            decimal? total = 0;
+            foreach (var item in request.OrderItems)
+            {
+                var orderItem = new OrderItem();
+                orderItem.ProductId = item.ProductId;
+                orderItem.Quantity = item.Quantity;
+                orderItem.Price = item.Price;
+
+                entity.OrderItems.Add(orderItem);
+                total += item.Quantity * item.Price;
+            }
+
+            if (total is null)
+                entity.Total = 0;
+            else
+                entity.Total = (decimal)total;
+        }    
 
         _context.Add(entity);
         await _context.SaveChangesAsync(cancellationToken);

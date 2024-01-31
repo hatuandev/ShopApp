@@ -7,6 +7,10 @@ public class ProductDbContext : DbContext
 
     public DbSet<Product> Products => Set<Product>();
     public DbSet<ProductType> ProductTypes => Set<ProductType>();
+    public DbSet<PickingType> PickingTypes => Set<PickingType>();
+    public DbSet<StockMove> StockMoves => Set<StockMove>();
+    public DbSet<StockPicking> StockPickings => Set<StockPicking>();
+    public DbSet<StockQuant> StockQuants => Set<StockQuant>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -12,6 +12,7 @@ public class GetProductWithPaginationDto
     public ProductType? ProductType { get; init; }
 
     public string? Description { get; init; }
+
     private class Mapping : Profile
     {
         public Mapping()

@@ -1,0 +1,178 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NetCore\\ShopApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\application\\stockpickings\\commands\\createstockpicking\\createstockpicking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\application\\stockpickings\\commands\\createstockpicking\\createstockpicking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\domain\\entities\\stockpicking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\domain\\entities\\stockpicking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\domain\\entities\\pickingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\domain\\entities\\pickingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\endpoints\\stockpickings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\endpoints\\stockpickings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\endpoints\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\endpoints\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|d:\\netcore\\shopapp\\src\\productapi\\domain\\entities\\stockmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F795B14-D9DC-4A68-864D-10AA448E4AAA}|src\\ProductAPI\\ProductAPI.csproj|solutionrelative:src\\productapi\\domain\\entities\\stockmove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46F36B1E-498F-4657-A457-ACADC07E453C}|src\\OrderAPI\\OrderAPI.csproj|d:\\netcore\\shopapp\\src\\orderapi\\application\\orders\\commands\\createorder\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46F36B1E-498F-4657-A457-ACADC07E453C}|src\\OrderAPI\\OrderAPI.csproj|solutionrelative:src\\orderapi\\application\\orders\\commands\\createorder\\createorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 722,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PickingType.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\PickingType.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Domain\\Entities\\PickingType.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\PickingType.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Domain\\Entities\\PickingType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:18:23.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockPicking.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\StockPicking.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Domain\\Entities\\StockPicking.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\StockPicking.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Domain\\Entities\\StockPicking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:18:16.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Domain\\Entities\\Product.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Domain\\Entities\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:11:45.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StockPickings.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Endpoints\\StockPickings.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Endpoints\\StockPickings.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Endpoints\\StockPickings.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Endpoints\\StockPickings.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBcAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:11:26.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Products.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Endpoints\\Products.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Endpoints\\Products.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Endpoints\\Products.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Endpoints\\Products.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:11:14.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StockMove.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\StockMove.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Domain\\Entities\\StockMove.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Domain\\Entities\\StockMove.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Domain\\Entities\\StockMove.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:07:11.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateOrder.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\OrderAPI\\Application\\Orders\\Commands\\CreateOrder\\CreateOrder.cs",
+              "RelativeDocumentMoniker": "src\\OrderAPI\\Application\\Orders\\Commands\\CreateOrder\\CreateOrder.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\OrderAPI\\Application\\Orders\\Commands\\CreateOrder\\CreateOrder.cs",
+              "RelativeToolTip": "src\\OrderAPI\\Application\\Orders\\Commands\\CreateOrder\\CreateOrder.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAswBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:02:20.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateStockPicking.cs",
+              "DocumentMoniker": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Application\\StockPickings\\Commands\\CreateStockPicking\\CreateStockPicking.cs",
+              "RelativeDocumentMoniker": "src\\ProductAPI\\Application\\StockPickings\\Commands\\CreateStockPicking\\CreateStockPicking.cs",
+              "ToolTip": "D:\\NetCore\\ShopApp\\src\\ProductAPI\\Application\\StockPickings\\Commands\\CreateStockPicking\\CreateStockPicking.cs",
+              "RelativeToolTip": "src\\ProductAPI\\Application\\StockPickings\\Commands\\CreateStockPicking\\CreateStockPicking.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwBMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-31T11:00:37.253Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 305,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

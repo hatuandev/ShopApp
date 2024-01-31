@@ -22,6 +22,66 @@ namespace ProductAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("ProductAPI.Domain.Entities.PickingType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Barcode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset>("Created")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset>("LastModified")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("SequenceCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PickingTypes", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Barcode = "WH-RECEIPTS",
+                            Created = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(5320), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedBy = "Admin",
+                            LastModified = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(5352), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastModifiedBy = "Admin",
+                            Name = "Receipts",
+                            SequenceCode = "IN"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Barcode = "WH-DELIVERY",
+                            Created = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(5357), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedBy = "Admin",
+                            LastModified = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(5358), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastModifiedBy = "Admin",
+                            Name = "Delivery",
+                            SequenceCode = "OUT"
+                        });
+                });
+
             modelBuilder.Entity("ProductAPI.Domain.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -116,6 +176,136 @@ namespace ProductAPI.Migrations
                     b.ToTable("ProductTypes");
                 });
 
+            modelBuilder.Entity("ProductAPI.Domain.Entities.StockMove", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("Created")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset>("LastModified")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockPickingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Unit")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StockPickingId");
+
+                    b.ToTable("StockMoves", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Created = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(8535), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedBy = "Admin",
+                            LastModified = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(8549), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastModifiedBy = "Admin",
+                            ProductId = 1,
+                            Quantity = 100,
+                            StockPickingId = 1,
+                            Unit = "Kg"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Created = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(8553), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedBy = "Admin",
+                            LastModified = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(8554), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastModifiedBy = "Admin",
+                            ProductId = 2,
+                            Quantity = 100,
+                            StockPickingId = 2,
+                            Unit = "Kg"
+                        });
+                });
+
+            modelBuilder.Entity("ProductAPI.Domain.Entities.StockPicking", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("Created")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset>("LastModified")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PickingTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset?>("ScheduledDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StockPickings", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Created = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(9904), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedBy = "Admin",
+                            LastModified = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(9907), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastModifiedBy = "Admin",
+                            Name = "WH/IN/00001",
+                            OrderId = 1,
+                            PickingTypeId = 1,
+                            ScheduledDate = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(9891), new TimeSpan(0, 7, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Created = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(9911), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedBy = "Admin",
+                            LastModified = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(9912), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastModifiedBy = "Admin",
+                            Name = "WH/IN/00002",
+                            OrderId = 2,
+                            PickingTypeId = 1,
+                            ScheduledDate = new DateTimeOffset(new DateTime(2024, 1, 30, 20, 36, 50, 42, DateTimeKind.Unspecified).AddTicks(9910), new TimeSpan(0, 7, 0, 0, 0))
+                        });
+                });
+
             modelBuilder.Entity("ProductAPI.Domain.Entities.Product", b =>
                 {
                     b.HasOne("ProductAPI.Domain.Entities.ProductType", "ProductType")
@@ -123,6 +313,20 @@ namespace ProductAPI.Migrations
                         .HasForeignKey("ProductTypeId");
 
                     b.Navigation("ProductType");
+                });
+
+            modelBuilder.Entity("ProductAPI.Domain.Entities.StockMove", b =>
+                {
+                    b.HasOne("ProductAPI.Domain.Entities.StockPicking", null)
+                        .WithMany("StockMoves")
+                        .HasForeignKey("StockPickingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ProductAPI.Domain.Entities.StockPicking", b =>
+                {
+                    b.Navigation("StockMoves");
                 });
 #pragma warning restore 612, 618
         }

@@ -215,5 +215,82 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ProductAPI.Endpoints.StockPickings",
+    "Method": "GetStockPickingWithPagination",
+    "RelativePath": "api/v1/stock-pickings/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "number",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductAPI.Application.Common.Models.PaginatedList\u00601[[ProductAPI.Application.StockPickings.Queries.GetStockPickingWithPagination.GetStockPickingWithPaginationDto, ProductAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProductAPI.Endpoints.StockPickings",
+    "Method": "CreateStockPicking",
+    "RelativePath": "api/v1/stock-pickings/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "ProductAPI.Application.StockPickings.Commands.CreateStockPicking.CreateStockPickingCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProductAPI.Endpoints.StockPickings",
+    "Method": "GetStockPickingById",
+    "RelativePath": "api/v1/stock-pickings/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ProductAPI.Application.StockPickings.Queries.GetStockPickingById.GetStockPickingByIdDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

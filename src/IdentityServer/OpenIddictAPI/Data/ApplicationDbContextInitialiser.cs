@@ -1,5 +1,4 @@
 ﻿using OpenIddictAPI.ConfigurationOptions;
-using Polly;
 
 namespace OpenIddictAPI.Data;
 

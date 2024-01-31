@@ -11,7 +11,7 @@ var configuration = builder.Configuration;
 configuration.Bind(appSettings);
 
 // Add services to the container.
-builder.Services.AddOpenIddictServices(builder.Configuration, appSettings);
+builder.AddOpenIddictServices(builder.Configuration, appSettings);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

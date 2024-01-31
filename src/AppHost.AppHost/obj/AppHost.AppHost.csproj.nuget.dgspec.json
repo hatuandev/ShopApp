@@ -33,6 +33,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\NetCore\\ShopApp\\src\\GatewayApi\\GatewayApi.csproj": {
+                "projectPath": "D:\\NetCore\\ShopApp\\src\\GatewayApi\\GatewayApi.csproj"
+              },
               "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj": {
                 "projectPath": "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj"
               },
@@ -63,6 +66,10 @@
             "Aspire.Hosting": {
               "target": "Package",
               "version": "[8.0.0-preview.1.23557.2, )"
+            },
+            "Aspire.Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23619.3, )"
             }
           },
           "imports": [
@@ -187,6 +194,131 @@
         }
       }
     },
+    "D:\\NetCore\\ShopApp\\src\\GatewayApi\\GatewayApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\NetCore\\ShopApp\\src\\GatewayApi\\GatewayApi.csproj",
+        "projectName": "GatewayApi",
+        "projectPath": "D:\\NetCore\\ShopApp\\src\\GatewayApi\\GatewayApi.csproj",
+        "packagesPath": "C:\\Users\\msI\\.nuget\\packages\\",
+        "outputPath": "D:\\NetCore\\ShopApp\\src\\GatewayApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\msI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\NetCore\\ShopApp\\src\\AppHost.ServiceDefaults\\AppHost.ServiceDefaults.csproj": {
+                "projectPath": "D:\\NetCore\\ShopApp\\src\\AppHost.ServiceDefaults\\AppHost.ServiceDefaults.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.6, )"
+            },
+            "OpenIddict.Validation.AspNetCore": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "OpenIddict.Validation.SystemNetHttp": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Yarp.ReverseProxy": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[8.0.0, 8.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.0, 8.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[8.0.0, 8.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
     "D:\\NetCore\\ShopApp\\src\\IdentityServer\\OpenIddictAPI\\OpenIddictAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -237,6 +369,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Aspire.Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0-preview.2.23619.3, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -246,6 +382,12 @@
               "version": "[8.0.1, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.1, )"
             },
@@ -368,6 +510,12 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.60.0, )"
             },
             "MediatR": {
               "target": "Package",
@@ -520,6 +668,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.60.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
@@ -546,9 +698,17 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
